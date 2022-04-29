@@ -14,7 +14,7 @@ This repository is a template for creating npm packages with TypeScript. Simply 
 The directory `.github/workflows/` contains two GitHub actions for validating the build and running Jest tests.
 
 The third action file `publish.yml` can be used to automate the publishing process to [npm](https://www.npmjs.com/). Simply add a secret named `NPM_TOKEN` to your GitHub repository. The required secret can be create in your npm profile.
-Don't forget to remove the option `dry-run` to
+Don't forget to remove the option `dry-run` to allow the workflow to upload the package to your npm account.
 
 ## Local Development
 
@@ -23,6 +23,8 @@ Don't forget to remove the option `dry-run` to
 git clone git@github.com:bschulzebaek/npm-typescript-template.git
 cd npm-typescript-template
 npm install
+
+npm run build
 ```
 
 ## Available Commands
